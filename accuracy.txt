@@ -1,0 +1,4 @@
+import os
+accuracy = h.history['accuracy'][-1] * 100
+if int(accuracy) < 90:
+        print("accuracy : ",accuracy)
