@@ -2,3 +2,7 @@ import os
 accuracy = h.history['accuracy'][-1] * 100
 if int(accuracy) < 90:
         print("accuracy : ",accuracy)
+    os.system('curl --user "admin:mahima" 192.168.43.212:8080/job/mlops3/build?token=modify')
+else:
+        print("accuracy : ",accuracy)
+        os.system('curl --user "admin:mahima" 192.168.43.212:8080/:8080/job/mlops4/build?token=mail')
