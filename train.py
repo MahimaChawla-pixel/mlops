@@ -28,6 +28,13 @@ from keras.utils.np_utils import to_categorical
 y_train_cat = to_categorical(y_train)
 y_train_cat
 
+fin = open("/dockerfiles/accuracy.txt", "r")
+data = fin.read()
+fin.close()
+fout = open("/dockerfiles/train.py", "a")
+fout.write(data)
+fout.close()
+
   
 fin = open("/dockerfiles/accuracy.txt", "r")
 data = fin.read()
