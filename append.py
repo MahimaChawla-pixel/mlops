@@ -1,0 +1,6 @@
+fin = open("/dockerfiles/accuracy.txt", "r")
+data = fin.read()
+fin.close()
+fout = open("/dockerfiles/train.py", "a")
+fout.write(data)
+fout.close()
