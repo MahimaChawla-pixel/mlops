@@ -27,21 +27,6 @@ y_train.shape
 from keras.utils.np_utils import to_categorical
 y_train_cat = to_categorical(y_train)
 y_train_cat
-
-fin = open("/dockerfiles/accuracy.txt", "r")
-data = fin.read()
-fin.close()
-fout = open("/dockerfiles/train.py", "a")
-fout.write(data)
-fout.close()
-
-  
-fin = open("/dockerfiles/accuracy.txt", "r")
-data = fin.read()
-fin.close()
-fout = open("/dockerfiles/train.py", "a")
-fout.write(data)
-fout.close()
 y_train_cat[7]
 from keras.models import Sequential
 from keras.layers import Dense
@@ -57,4 +42,14 @@ model.compile(optimizer=RMSprop(), loss='categorical_crossentropy',
              metrics=['accuracy']
              )
 h = model.fit(X_train, y_train_cat, epochs=2)
+
+
+
+fin = open("/dockerfiles/accuracy.txt", "r")
+data = fin.read()
+fin.close()
+fout = open("/dockerfiles/train.py", "a")
+fout.write(data)
+fout.close()
+
 
