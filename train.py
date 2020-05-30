@@ -45,11 +45,6 @@ h = model.fit(X_train, y_train_cat, epochs=2)
 
 
 
-fin = open("/dockerfiles/accuracy.txt", "r")
-data = fin.read()
-fin.close()
-fout = open("/dockerfiles/train.py", "a")
-fout.write(data)
-fout.close()
+
 
 
